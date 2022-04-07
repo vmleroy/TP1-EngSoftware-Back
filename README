@@ -1,3 +1,6 @@
+. npm install
+    
+Se indicar que esta faltando alguma biblioteca utilize:
 . npm install nodemon
 . npm install mongoose
 . npm install express

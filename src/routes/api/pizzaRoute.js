@@ -1,5 +1,5 @@
 import express from "express";
-import PizzaController from "../controllers/pizzaController.js";
+import PizzaController from "../../controllers/pizzaController.js";
 
 const router = express.Router();
 

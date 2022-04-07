@@ -1,5 +1,5 @@
 import express from "express";
-import pizza from "./pizzaRoute.js"
+import pizza from "./api/pizzaRoute.js"
 
 const routes = (app) => {
     app.route('/').get( (req, res) => {
