@@ -1,7 +1,8 @@
-import mongoose from "mongoose"
+import mongoose from "mongoose";
+import dotenv from "dotenv";
+dotenv.config();
 
-mongoose.connect("mongodb+srv://admin:admin@tp1-engsoftware.2ukzi.mongodb.net/Pizzaria")
+mongoose.connect(process.env.MONGODB_URI)
 
 let db = mongoose.connection
-
 export default db
