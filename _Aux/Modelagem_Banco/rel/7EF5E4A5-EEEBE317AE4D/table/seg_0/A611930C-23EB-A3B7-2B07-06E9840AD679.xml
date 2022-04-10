@@ -1,0 +1,81 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A611930C-23EB-A3B7-2B07-06E9840AD679" name="Pizza">
+<createdBy>Victor</createdBy>
+<createdTime>2022-04-09 19:16:54 UTC</createdTime>
+<ownerDesignName>Modelagem_Banco</ownerDesignName>
+<ordsAlias>table_1</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="_id" id="C0A61625-75C1-1E98-E079-F495D5659C48">
+<createdBy>Victor</createdBy>
+<createdTime>2022-04-09 19:17:52 UTC</createdTime>
+<ownerDesignName>Modelagem_Banco</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Sabor" id="08BBC5C7-9E11-5669-E19C-B81F3F994D76">
+<createdBy>Victor</createdBy>
+<createdTime>2022-04-09 19:17:52 UTC</createdTime>
+<ownerDesignName>Modelagem_Banco</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Descricao" id="E3CE711A-DB6D-FE62-7DFA-C615F81ADB0B">
+<createdBy>Victor</createdBy>
+<createdTime>2022-04-09 19:17:52 UTC</createdTime>
+<ownerDesignName>Modelagem_Banco</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300</dataTypeSize>
+<ownDataTypeParameters>300,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Valor" id="1D835641-3D6B-CAAA-F487-7802D8819AC5">
+<createdBy>Victor</createdBy>
+<createdTime>2022-04-09 19:17:52 UTC</createdTime>
+<ownerDesignName>Modelagem_Banco</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,4,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Imagem" id="B814966A-90D4-4B53-7AEA-ED93CC0EF5C7">
+<createdBy>Victor</createdBy>
+<createdTime>2022-04-09 19:22:51 UTC</createdTime>
+<ownerDesignName>Modelagem_Banco</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT010</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="DC025357-2283-5395-46B5-C2538F75B698" name="Pizza_PK">
+<createdBy>Victor</createdBy>
+<createdTime>2022-04-09 19:17:52 UTC</createdTime>
+<ownerDesignName>Modelagem_Banco</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C0A61625-75C1-1E98-E079-F495D5659C48"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

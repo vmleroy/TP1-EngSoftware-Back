@@ -1,0 +1,9 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.relational.RelationalDesign>
+   <object objectType="Table" objectID="22C859A5-B470-E82B-B7C0-318E7FF080C8" name="Usuario" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.relational.Table" propertyParentId="7EF5E4A5-1FB8-0245-C10C-EEEBE317AE4D" propertySourceId="" propertyTargetId=""/>
+   <object objectType="Table" objectID="5254E663-3CBE-6A5D-8E49-94A37E9F0356" name="Pedidos" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.relational.Table" propertyParentId="7EF5E4A5-1FB8-0245-C10C-EEEBE317AE4D" propertySourceId="" propertyTargetId=""/>
+   <object objectType="Table" objectID="90DE0D0E-0FDD-8A3E-5346-8FAD829FB497" name="Promocoes" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.relational.Table" propertyParentId="7EF5E4A5-1FB8-0245-C10C-EEEBE317AE4D" propertySourceId="" propertyTargetId=""/>
+   <object objectType="Table" objectID="A0CD4DB8-9886-4D18-F0B9-5B63C2AE7916" name="Bebidas" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.relational.Table" propertyParentId="7EF5E4A5-1FB8-0245-C10C-EEEBE317AE4D" propertySourceId="" propertyTargetId=""/>
+   <object objectType="Table" objectID="A611930C-23EB-A3B7-2B07-06E9840AD679" name="Pizza" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.relational.Table" propertyParentId="7EF5E4A5-1FB8-0245-C10C-EEEBE317AE4D" propertySourceId="" propertyTargetId=""/>
+   <object objectType="Table" objectID="CE0A2FE6-72A0-1D9D-0F44-9DE031E3E2E8" name="Bairros" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.relational.Table" propertyParentId="7EF5E4A5-1FB8-0245-C10C-EEEBE317AE4D" propertySourceId="" propertyTargetId=""/>
+</oracle.dbtools.crest.model.design.relational.RelationalDesign>

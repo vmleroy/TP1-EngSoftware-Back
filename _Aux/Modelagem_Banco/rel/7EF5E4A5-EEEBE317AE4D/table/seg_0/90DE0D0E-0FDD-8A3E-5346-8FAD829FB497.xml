@@ -1,0 +1,81 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="90DE0D0E-0FDD-8A3E-5346-8FAD829FB497" name="Promocoes">
+<createdBy>Victor</createdBy>
+<createdTime>2022-04-09 19:21:28 UTC</createdTime>
+<ownerDesignName>Modelagem_Banco</ownerDesignName>
+<ordsAlias>table_4</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="_id" id="7F04D2A9-47E8-BDC7-2D31-5463A003E657">
+<createdBy>Victor</createdBy>
+<createdTime>2022-04-09 19:21:49 UTC</createdTime>
+<ownerDesignName>Modelagem_Banco</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nome" id="45F9C155-37FE-E1B3-AC9F-C685529E64C2">
+<createdBy>Victor</createdBy>
+<createdTime>2022-04-09 19:21:49 UTC</createdTime>
+<ownerDesignName>Modelagem_Banco</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Descricao" id="ED695114-D27A-34FD-00A7-56086D3EC5B6">
+<createdBy>Victor</createdBy>
+<createdTime>2022-04-09 19:21:59 UTC</createdTime>
+<ownerDesignName>Modelagem_Banco</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300</dataTypeSize>
+<ownDataTypeParameters>300,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Valor" id="0C25A312-5EBD-030D-64B5-79597DC90406">
+<createdBy>Victor</createdBy>
+<createdTime>2022-04-09 19:22:12 UTC</createdTime>
+<ownerDesignName>Modelagem_Banco</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,5,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Imagem" id="7676429D-1C83-0593-8616-4E0B52425EC3">
+<createdBy>Victor</createdBy>
+<createdTime>2022-04-09 19:22:29 UTC</createdTime>
+<ownerDesignName>Modelagem_Banco</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT010</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F240119A-605B-8B62-F523-8637A036FD8F" name="Promocoes_PK">
+<createdBy>Victor</createdBy>
+<createdTime>2022-04-09 19:21:49 UTC</createdTime>
+<ownerDesignName>Modelagem_Banco</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7F04D2A9-47E8-BDC7-2D31-5463A003E657"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
