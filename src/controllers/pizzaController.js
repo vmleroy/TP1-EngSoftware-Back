@@ -12,7 +12,7 @@ class PizzaController {
     }
 
     static getPizzasById = (req, res) => {
-        const id = req.params.id
+        const id = req.params.id_pizza
         pizzas.findById(id, (err, pizza) => {
             if (err)
                 res.status(400).send({message: `${err.message} - falha ao encontrar pizza desejada.`})
@@ -32,7 +32,7 @@ class PizzaController {
     }
 
     static updatePizza = (req, res) => {
-        const id = req.params.id
+        const id = req.params.id_pizza
         pizzas.findByIdAndUpdate(id, {$set: req.body}, (err) => {
             if (err)
                 res.status(500).send({message: `${err.message} - falha ao atualizar a pizza.`})
@@ -42,7 +42,7 @@ class PizzaController {
     }
 
     static deletePizza = (req, res) => {
-        const id = req.params.id
+        const id = req.params.id_pizza
         pizzas.findByIdAndDelete(id, (err) => {
             if (err)
                 res.status(500).send({message: `${err.message} - falha ao deletar a pizza.`})

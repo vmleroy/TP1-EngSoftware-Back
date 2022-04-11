@@ -5,10 +5,10 @@ const router = express.Router();
 
 router
     .get("/cardapio", PizzaController.getPizzas)
-    .get("/cardapio/:id", PizzaController.getPizzasById)
+    .get("/cardapio/:id_pizza", PizzaController.getPizzasById)
     .post("/cardapio", PizzaController.createPizza)
-    .put("/cardapio/:id", PizzaController.updatePizza)
-    .delete("/cardapio/:id", PizzaController.deletePizza)
+    .put("/cardapio/:id_pizza", PizzaController.updatePizza)
+    .delete("/cardapio/:id_pizza", PizzaController.deletePizza)
 
 
 export default router
