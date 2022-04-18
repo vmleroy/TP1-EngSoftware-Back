@@ -21,14 +21,36 @@ const orderSchema = new mongooose.Schema({
         default: 'pending',
     },
     items: [{
-        type: mongooose.Schema.Types.ObjectId,
-        ref: 'Pizza',
-        required: true,
-    },
+        quantity: {
+          type: Number,
+          required: true,
+          default: 1,
+        },
+        price: {
+          type: Number,
+          required: true,
+        },
+        pizza: {
+          type: mongooose.Schema.Types.ObjectId,
+          ref: 'Pizza', 
+          required: true,
+        }
+      },
       {
-        type: mongooose.Schema.Types.ObjectId,
-        ref: 'Drink',
-        required: true,
+        quantity: {
+          type: Number,
+          required: true,
+          default: 1,
+        },
+        price: {
+          type: Number,
+          required: true,
+        },
+        drink: {
+          type: mongooose.Schema.Types.ObjectId,
+          ref: 'Drink',
+          required: true,
+        }
       }],
 });
 
