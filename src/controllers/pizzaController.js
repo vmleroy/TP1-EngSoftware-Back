@@ -1,7 +1,6 @@
 import pizzas from '../models/Pizza.js'
 
 class PizzaController { 
-
     static getPizzas = (req, res) => {
         pizzas.find((err, pizzas) => {
             if (err)
@@ -50,7 +49,6 @@ class PizzaController {
                 res.status(200).send({message: `Pizza deletada com sucesso!`})
         })
     }
-
 }
 
-export default PizzaController
+export default PizzaController;
