@@ -1,6 +1,6 @@
-const mongooose = require('mongoose');
+import mongoose from "mongoose";
 
-const adressSchema = new mongooose.Schema({
+const adressSchema = new mongoose.Schema({
     cep: {
         type: String,
         required: true,
@@ -24,7 +24,7 @@ const adressSchema = new mongooose.Schema({
     },
 });
 
-const adresses = mongooose.model('adresses', adressSchema);
+const adresses = mongoose.model('adresses', adressSchema);
 export default adresses;
 
     

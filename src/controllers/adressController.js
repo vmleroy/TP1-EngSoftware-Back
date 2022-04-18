@@ -1,4 +1,4 @@
-import adress from '../models/Pizza.js'
+import adress from '../models/Adress.js'
 
 class AdressController {
   static getAdresses = (req, res) => {

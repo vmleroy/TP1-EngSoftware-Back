@@ -1,6 +1,6 @@
-const mongooose = require('mongoose');
+import mongoose from "mongoose";
 
-const drinkSchema = new mongooose.Schema({
+const drinkSchema = new mongoose.Schema({
     name: {
         type: String,
         required: true,

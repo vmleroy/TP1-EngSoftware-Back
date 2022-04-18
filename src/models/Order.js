@@ -1,6 +1,6 @@
-const mongooose = require('mongoose');
+import mongoose from "mongoose";
 
-const orderSchema = new mongooose.Schema({
+const orderSchema = new mongoose.Schema({
     number: {
         type: Number,
         required: true,
@@ -54,5 +54,5 @@ const orderSchema = new mongooose.Schema({
       }],
 });
 
-const order = mongooose.model('orders', orderSchema);
+const order = mongoose.model('orders', orderSchema);
 export default order;
