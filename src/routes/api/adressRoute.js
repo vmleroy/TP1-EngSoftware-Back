@@ -5,10 +5,9 @@ const router = express.Router();
 
 router
     .get("/endereco", AdressController.getAdresses)
-    .get("/endereco/:id_endereco", AdressController.getAdressesById)
+    .get("/endereco/:id", AdressController.getAdressById)
     .post("/endereco", AdressController.createAdress)
-    .put("/endereco/:id_endereco", AdressController.updateAdress)
-    .delete("/endereco/:id_endereco", AdressController.deleteAdress)
-
+    .put("/endereco/:id", AdressController.updateAdress)
+    .delete("/endereco/:id", AdressController.deleteAdress)
 
 export default router

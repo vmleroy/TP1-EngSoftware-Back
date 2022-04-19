@@ -1,18 +1,19 @@
 import mongoose from "mongoose";
+import Schema from "mongoose";
 
 const orderSchema = new mongoose.Schema({
     number: {
         type: Number,
-        required: true,
+        required: false,
     },
     user: {
-        type: mongooose.Schema.Types.ObjectId,
-        ref: 'User',
+        type: Schema.Types.ObjectId,
+        ref: 'users',
         required: true,
     },
     createDate: {
         type: Date,
-        required: true,
+        required: false,
     },
     status: {
         type: String,
@@ -21,37 +22,29 @@ const orderSchema = new mongoose.Schema({
         default: 'pending',
     },
     items: [{
-        quantity: {
-          type: Number,
-          required: true,
-          default: 1,
-        },
-        price: {
-          type: Number,
-          required: true,
-        },
-        pizza: {
-          type: mongooose.Schema.Types.ObjectId,
-          ref: 'Pizza', 
-          required: true,
-        }
+      quantity: {
+        type: Number,
+        required: false,
+        default: 1,
       },
-      {
-        quantity: {
-          type: Number,
-          required: true,
-          default: 1,
-        },
-        price: {
-          type: Number,
-          required: true,
-        },
-        drink: {
-          type: mongooose.Schema.Types.ObjectId,
-          ref: 'Drink',
-          required: true,
-        }
-      }],
+      pizza: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'pizzas', 
+        required: false,
+      }
+    },
+    {
+      quantity: {
+        type: Number,
+        required: false,
+        default: 1,
+      },
+      drink: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'drinks',
+        required: false,
+      }
+    }],
 });
 
 const order = mongoose.model('orders', orderSchema);

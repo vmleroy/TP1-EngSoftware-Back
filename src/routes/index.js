@@ -1,6 +1,9 @@
 import express from "express";
 import pizza from "./api/pizzaRoute.js"
 import adress from "./api/adressRoute.js"
+import user from "./api/userRoute.js"
+import drink from "./api/drinkRoute.js"
+import order from "./api/orderRoute.js"
 
 const routes = (app) => {
     app.route('/').get( (req, res) => {
@@ -10,10 +13,23 @@ const routes = (app) => {
         express.json(),
         pizza
     )
-    app.use (
+    app.use(
         express.json(),
         adress
     )
+    app.use(
+        express.json(),
+        user
+    )
+    app.use(
+        express.json(),
+        drink
+    )
+    app.use(
+        express.json(),
+        order
+    )
+
 }
 
 export default routes

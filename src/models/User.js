@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+const Schema = mongoose.Schema;
 
 const userSchema = new mongoose.Schema({
     name: {
@@ -29,9 +30,9 @@ const userSchema = new mongoose.Schema({
       type: String,
       required: true,
     },
-    address: {
+    adress: {
       type: Schema.Types.ObjectId,
-      ref: 'Adress', 
+      ref: 'adresses', 
       required: true
     },
     roles: [{
@@ -41,5 +42,5 @@ const userSchema = new mongoose.Schema({
     }],
 });
 
-const users = mongoose.model('users', UserSchema);
+const users = mongoose.model('users', userSchema);
 export default users;
