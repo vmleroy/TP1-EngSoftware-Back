@@ -21,29 +21,15 @@ const orderSchema = new mongoose.Schema({
         enum: ['pending', 'delivered', 'canceled'],
         default: 'pending',
     },
-    items: [{
-      quantity: {
-        type: Number,
-        required: false,
-        default: 1,
-      },
-      pizza: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'pizzas', 
-        required: false,
-      }
-    },
-    {
-      quantity: {
-        type: Number,
-        required: false,
-        default: 1,
-      },
-      drink: {
-        type: mongoose.Schema.Types.ObjectId,
+    pizzas: [{
+        type: Schema.Types.ObjectId,
+        ref: 'pizzas',
+        required: true,
+    }],
+    drinks: [{
+        type: Schema.Types.ObjectId,
         ref: 'drinks',
-        required: false,
-      }
+        required: true,
     }],
 });
 

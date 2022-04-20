@@ -7,7 +7,7 @@ class orderController {
         res.status(400).send({message: `${err.message} - falha ao requisitar pedidos.`})
       else   
         res.status(200).json(orders)  
-    })
+    }).populate('user').populate('pizzas').populate('drinks')
   }
 
   static createOrder(req, res) {
@@ -16,7 +16,6 @@ class orderController {
     newOrder.number = Math.floor(Math.random() * (9999 - 1000) + 1000);
     newOrder.createDate = Date.now();
     newOrder.status = 'pending';
-
     newOrder.save((err, order) => {
       if (err)
         res.status(400).send({message: `${err.message} - falha ao criar pedido.`})

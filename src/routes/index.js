@@ -1,6 +1,6 @@
 import express from "express";
 import pizza from "./api/pizzaRoute.js"
-import adress from "./api/adressRoute.js"
+import address from "./api/addressRoute.js"
 import user from "./api/userRoute.js"
 import drink from "./api/drinkRoute.js"
 import order from "./api/orderRoute.js"
@@ -15,7 +15,7 @@ const routes = (app) => {
     )
     app.use(
         express.json(),
-        adress
+        address
     )
     app.use(
         express.json(),

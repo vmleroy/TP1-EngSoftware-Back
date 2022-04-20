@@ -1,7 +1,7 @@
-import adress from '../models/Adress.js'
+import adress from '../models/Address.js'
 
-class AdressController {
-    static getAdresses = (req, res) => {
+class AddressController {
+    static getAddresses = (req, res) => {
         adress.find((err, adresses) => {
             if (err)
                 res.status(400).send({message: `${err.message} - falha ao requisitar endereços.`})
@@ -10,7 +10,7 @@ class AdressController {
         })
     }
 
-    static createAdress = (req, res) => {
+    static createAddress = (req, res) => {
             const newAdress = new adress(req.body)
             newAdress.save((err, adress) => {
                 if (err)
@@ -20,7 +20,7 @@ class AdressController {
             })
         }
 
-    static getAdressById = (req, res) => {
+    static getAddressById = (req, res) => {
         adress.findById(req.params.id, (err, adress) => {
             if (err)
                 res.status(400).send({message: `${err.message} - falha ao requisitar endereço.`})
@@ -29,7 +29,7 @@ class AdressController {
         })
     }
 
-    static updateAdress = (req, res) => {
+    static updateAddress = (req, res) => {
         adress.findByIdAndUpdate(req.params.id, req.body, (err, adress) => {
             if (err)
                 res.status(400).send({message: `${err.message} - falha ao atualizar endereço.`})
@@ -38,7 +38,7 @@ class AdressController {
         })
     }
 
-    static deleteAdress = (req, res) => {
+    static deleteAddress = (req, res) => {
         adress.findByIdAndRemove(req.params.id, (err, adress) => {
             if (err)
                 res.status(400).send({message: `${err.message} - falha ao deletar endereço.`})
@@ -48,4 +48,4 @@ class AdressController {
     }
 }
 
-export default AdressController;
+export default AddressController;

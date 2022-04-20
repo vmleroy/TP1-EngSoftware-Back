@@ -30,9 +30,9 @@ const userSchema = new mongoose.Schema({
       type: String,
       required: true,
     },
-    adress: {
+    address: {
       type: Schema.Types.ObjectId,
-      ref: 'adresses', 
+      ref: 'addresses', 
       required: true
     },
     roles: [{
