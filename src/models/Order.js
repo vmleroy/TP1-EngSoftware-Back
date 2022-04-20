@@ -26,11 +26,17 @@ const orderSchema = new mongoose.Schema({
         ref: 'pizzas',
         required: true,
     }],
+    pizza2flavors: [{
+        type: Schema.Types.ObjectId,
+        ref: 'pizza2flavors',
+        required: true,
+    }],
     drinks: [{
         type: Schema.Types.ObjectId,
         ref: 'drinks',
         required: true,
     }],
+
 });
 
 const order = mongoose.model('orders', orderSchema);
