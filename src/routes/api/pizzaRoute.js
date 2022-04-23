@@ -4,11 +4,11 @@ import PizzaController from "../../controllers/pizzaController.js";
 const router = express.Router();
 
 router
-    .get("/cardapio", PizzaController.getPizzas)
-    .get("/cardapio/:id_pizza", PizzaController.getPizzasById)
-    .post("/cardapio", PizzaController.createPizza)
-    .put("/cardapio/:id_pizza", PizzaController.updatePizza)
-    .delete("/cardapio/:id_pizza", PizzaController.deletePizza)
+    .get("/pizza", PizzaController.getPizzas)
+    .get("/pizza/:id_pizza", PizzaController.getPizzasById)
+    .post("/pizza", PizzaController.createPizza)
+    .put("/pizza/:id_pizza", PizzaController.updatePizza)
+    .delete("/pizza/:id_pizza", PizzaController.deletePizza)
 
 
 export default router

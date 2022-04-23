@@ -7,7 +7,7 @@ import order from "./api/orderRoute.js"
 import pizza2flavors from "./api/pizza2FlavorsRoute.js"
 
 const routes = (app) => {
-    app.route('/').get( (req, res) => {
+    app.route('/api/v1').get( (req, res) => {
         res.status(200).send({titulo: "Pizzaria Tp1-Engenharia de Software"})
     })
     app.use(express.json(),pizza)
