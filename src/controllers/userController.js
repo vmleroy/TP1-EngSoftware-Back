@@ -30,7 +30,7 @@ class UserController {
       if (err)
         res.status(400).send({message: `${err.message} - falha ao criar usuário.`})
       else
-        res.status(200).json(user)
+        res.status(200).send({ message: `Usuario criado com sucesso!`})
     })
   }
 
@@ -39,16 +39,16 @@ class UserController {
       if (err)
         res.status(400).send({message: `${err.message} - falha ao atualizar usuário.`})
       else
-        res.status(200).json(user)
+        res.status(200).send({ message: `Usuario atualizado com sucesso!`})
     })
   }
 
   static deleteUser = (req, res) => {
     user.findByIdAndRemove(req.params.id, (err, user) => {
       if (err)
-        res.status(400).send({message: `${err.message} - falha ao deletar usuário.`})
+        res.status(400).send({message: `${err.message} - falha ao remover usuário.`})
       else
-        res.status(200).json(user)
+        res.status(200).send({ message: `Usuario removido com sucesso!`})
     })
   }
 

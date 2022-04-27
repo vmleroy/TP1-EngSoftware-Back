@@ -1,6 +1,10 @@
 import mongoose from "mongoose";
 
 const adressSchema = new mongoose.Schema({
+    city: {
+        type: String,
+        required: true,
+    },
     cep: {
         type: String,
         required: true,
