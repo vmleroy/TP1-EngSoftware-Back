@@ -63,7 +63,7 @@ class PromoController {
     newPromo.name = newPromo.name.slice(1, newPromo.name.length - 3)
     
     newPromo.originalPrice = newPromo.price
-    newPromo.promoPrice = (newPromo.originalPrice * (1 - (newPromo.discount/100))).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
+    newPromo.promoPrice = (newPromo.originalPrice * (1 - (newPromo.discount/100)))
 
     newPromo.save((err, promo) => {
       if(err)

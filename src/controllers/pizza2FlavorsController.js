@@ -16,7 +16,7 @@ class pizza2FlavorsController {
     const pizza2FlavorsFind = await pizza2Flavors.find({pizza1: req.body.pizza1, pizza2: req.body.pizza2})
 
     if(pizza2FlavorsFind.length > 0) {
-      res.status(200).send({ message: `Pizza de 2 sabores adicionada!`})
+      res.status(200).send(pizza2FlavorsFind)
     } else {
       const pizza1 = await Pizza.findById(newPizza2Flavors.pizza1)
       const pizza2 = await Pizza.findById(newPizza2Flavors.pizza1)

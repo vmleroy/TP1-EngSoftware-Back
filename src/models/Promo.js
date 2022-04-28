@@ -25,7 +25,7 @@ const promoSchema = new mongoose.Schema({
     required: false,
   },
   promoPrice: {
-    type: String,
+    type: Number,
     required: false,
   },
   discount: {
