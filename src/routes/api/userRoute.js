@@ -12,3 +12,24 @@ router
     .delete("/usuario/:id", UserController.deleteUser)
     
 export default router;
+
+/*
+POST '/usuario' example:
+
+OBS: it is necessary to create an address first!
+
+{
+	"name": "name",
+	"email": "email",
+	"password": "password",
+	"cpf": "cpf",
+	"phone": "phone",
+	"address": "address_id"
+}
+
+POST '/loginUsuario' example:
+{
+	"email": "email",
+	"password": "password"
+}
+ */
