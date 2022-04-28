@@ -9,7 +9,7 @@ const userSchema = new mongoose.Schema({
         min: 3,
         max: 50,
         message: "name must be between 3 and 50 characters",
-    }, 
+      }, 
     },
     email: {
       type: String, 
@@ -35,11 +35,13 @@ const userSchema = new mongoose.Schema({
       ref: 'addresses', 
       required: true
     },
-    roles: [{
-      type: String,
-      enum: ['user', 'admin'],
-      default: 'user',
-    }],
+    roles: [
+      {
+        type: String,
+        enum: ['user', 'admin'],
+        default: 'user',
+      }
+    ],
 });
 
 const users = mongoose.model('users', userSchema);
