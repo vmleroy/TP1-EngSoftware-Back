@@ -34,6 +34,19 @@ class UserController {
     })
   }
 
+  static userLogin = (req, res) => {
+    const userEmail = req.body.email
+    const userPassword = req.body.password
+
+    user.findOne({ email: userEmail }, (err, user) => {
+      if (err)
+        res.status(401).send({message: `${err.message} - nao autorizado.`})
+      else
+        if (user.password == userPassword)
+          res.status(200).json(user)
+    })
+  }
+
   static updateUser = (req, res) => {
     user.findByIdAndUpdate(req.params.id, req.body, (err, user) => {
       if (err)
