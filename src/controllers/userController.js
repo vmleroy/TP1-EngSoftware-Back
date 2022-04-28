@@ -34,6 +34,23 @@ class UserController {
     })
   }
 
+  static loginUser = (req, res) => {
+    let {email, password} = req.body
+    password = md5(password + process.env.SALT_KEY)
+    user.findOne({email:email},(err, user) => {
+      if (err)
+        res.status(400).send({message: `${err.message} - falha ao requisitar usuários.`})
+      else if (user) {
+        if (user.password === password)
+          res.status(200).json(user);
+        else
+          res.status(403).send({message: ` - Acesso proibido.`})
+            }
+      else
+        res.status(404).send({message: ` - falha ao encontrar usuário.`})
+    })
+  }
+
   static updateUser = (req, res) => {
     user.findByIdAndUpdate(req.params.id, req.body, (err, user) => {
       if (err)
