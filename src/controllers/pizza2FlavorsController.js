@@ -19,7 +19,7 @@ class pizza2FlavorsController {
       res.status(200).send(pizza2FlavorsFind)
     } else {
       const pizza1 = await Pizza.findById(newPizza2Flavors.pizza1)
-      const pizza2 = await Pizza.findById(newPizza2Flavors.pizza1)
+      const pizza2 = await Pizza.findById(newPizza2Flavors.pizza2)
 
       newPizza2Flavors.name = pizza1.name + ' & ' + pizza2.name + ' (meio a meio)'
       newPizza2Flavors.description = 'Pizzas: ' + pizza1.name + ' e ' + pizza2.name + ' meio a meio'
