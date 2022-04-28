@@ -69,7 +69,7 @@ class PromoController {
       if(err)
         res.status(400).send({ message: `${err.message} - falha ao criar promoção.`})
       else
-        res.status(200).send({ message: `Promoção criada com sucesso!`})
+        res.status(200).send(promo)
     })
   }
 
@@ -87,7 +87,7 @@ class PromoController {
       if(err)
         res.status(400).send({ message: `${err.message} - falha ao atualizar promoção.`})
       else
-        res.status(200).send({ message: `Promoção atualizada com sucesso!`})
+        res.status(200).send(promo)
     })
   }
 

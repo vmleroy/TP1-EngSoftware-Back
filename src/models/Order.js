@@ -36,6 +36,11 @@ const orderSchema = new mongoose.Schema({
         ref: 'drinks',
         required: true,
     }],
+    promos: [{
+        type: Schema.Types.ObjectId,
+        ref: 'promos',
+        required: true,
+    }]
 
 });
 

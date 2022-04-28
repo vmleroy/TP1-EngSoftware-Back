@@ -29,7 +29,7 @@ class orderController {
       if (err)
         res.status(400).send({message: `${err.message} - falha ao criar pedido.`})
       else
-        res.status(200).send({ message: `Pedido criado com sucesso!`})
+        res.status(200).send(order)
     })
   }
 
@@ -47,7 +47,7 @@ class orderController {
       if (err)
         res.status(400).send({message: `${err.message} - falha ao atualizar pedido.`})
       else
-      res.status(200).send({ message: `Pedido atualizado com sucesso!`})
+      res.status(200).send(order)
     })
   }
 

@@ -28,7 +28,7 @@ class pizza2FlavorsController {
         if (err)
           res.status(500).send({message: `${err.message} - falha ao criar pizza 2 sabores.`})
         else
-          res.status(200).send({ message: `Pizza de 2 sabores criada com sucesso!`})
+          res.status(200).send(newPizza2Flavors)
       })
     }
   }
@@ -47,7 +47,7 @@ class pizza2FlavorsController {
       if (err)
         res.status(400).send({message: `${err.message} - falha ao atualizar pizza 2 sabores.`})
       else
-      res.status(200).send({ message: `Pizza de 2 sabores atualizada com sucesso!`})
+      res.status(200).send(pizza2Flavors)
     })
   }
 

@@ -16,7 +16,7 @@ class DrinkController {
       if (err)
         res.status(400).send({message: `${err.message} - falha ao criar bebida.`})
       else
-        res.status(200).send({ message: `Bebida criada com sucesso!`})
+        res.status(200).send(drink)
     })
   }
 
@@ -34,7 +34,7 @@ class DrinkController {
       if (err)
         res.status(400).send({message: `${err.message} - falha ao atualizar bebida.`})
       else
-      res.status(200).send({ message: `Bebida atualizada com sucesso!`})
+      res.status(200).send(drink)
     })
   }
 

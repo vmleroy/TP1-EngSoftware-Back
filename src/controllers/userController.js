@@ -30,7 +30,7 @@ class UserController {
       if (err)
         res.status(400).send({message: `${err.message} - falha ao criar usuário.`})
       else
-        res.status(200).send({ message: `Usuario criado com sucesso!`})
+        res.status(200).send(user)
     })
   }
 
@@ -39,7 +39,7 @@ class UserController {
       if (err)
         res.status(400).send({message: `${err.message} - falha ao atualizar usuário.`})
       else
-        res.status(200).send({ message: `Usuario atualizado com sucesso!`})
+        res.status(200).send(user)
     })
   }
 

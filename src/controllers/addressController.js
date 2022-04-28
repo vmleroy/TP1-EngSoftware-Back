@@ -16,7 +16,7 @@ class AddressController {
                 if (err)
                     res.status(400).send({message: `${err.message} - falha ao criar endereço.`})
                 else
-                    res.status(200).send({ message: `Endereço criado com sucesso!`})
+                    res.status(200).send(adress)
             })
         }
 
@@ -34,7 +34,7 @@ class AddressController {
             if (err)
                 res.status(400).send({message: `${err.message} - falha ao atualizar endereço.`})
             else
-                res.status(200).send({ message: `Endereço atualizado com sucesso!`})
+                res.status(200).send(adress)
         })
     }
 
