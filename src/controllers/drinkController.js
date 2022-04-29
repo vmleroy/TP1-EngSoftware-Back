@@ -16,7 +16,7 @@ class DrinkController {
       if (err)
         res.status(400).send({message: `${err.message} - falha ao criar bebida.`})
       else
-        res.status(200).json(drink)
+        res.status(200).send(drink)
     })
   }
 
@@ -34,16 +34,16 @@ class DrinkController {
       if (err)
         res.status(400).send({message: `${err.message} - falha ao atualizar bebida.`})
       else
-        res.status(200).json(drink)
+      res.status(200).send(drink)
     })
   }
 
   static deleteDrink = (req, res) => {
     drink.findByIdAndRemove(req.params.id, (err, drink) => {
       if (err)
-        res.status(400).send({message: `${err.message} - falha ao deletar bebida.`})
+        res.status(400).send({message: `${err.message} - falha ao remover bebida.`})
       else
-        res.status(200).json(drink)
+        res.status(200).send({ message: `Bebida removida com sucesso!`})
     })
   }
 }

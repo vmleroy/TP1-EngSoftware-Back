@@ -16,7 +16,7 @@ class AddressController {
                 if (err)
                     res.status(400).send({message: `${err.message} - falha ao criar endereço.`})
                 else
-                    res.status(200).json(adress)
+                    res.status(200).send(adress)
             })
         }
 
@@ -34,16 +34,16 @@ class AddressController {
             if (err)
                 res.status(400).send({message: `${err.message} - falha ao atualizar endereço.`})
             else
-                res.status(200).json(adress)
+                res.status(200).send(adress)
         })
     }
 
     static deleteAddress = (req, res) => {
         adress.findByIdAndRemove(req.params.id, (err, adress) => {
             if (err)
-                res.status(400).send({message: `${err.message} - falha ao deletar endereço.`})
+                res.status(400).send({message: `${err.message} - falha ao remover endereço.`})
             else
-                res.status(200).json(adress)
+                res.status(200).send({ message: `Endereço removido com sucesso!`})
         })
     }
 }

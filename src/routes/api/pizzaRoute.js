@@ -10,5 +10,4 @@ router
     .put("/pizza/:id_pizza", PizzaController.updatePizza)
     .delete("/pizza/:id_pizza", PizzaController.deletePizza)
 
-
 export default router

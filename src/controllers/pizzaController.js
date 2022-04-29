@@ -36,7 +36,7 @@ class PizzaController {
             if (err)
                 res.status(500).send({message: `${err.message} - falha ao atualizar a pizza.`})
             else   
-                res.status(200).send({message: `Pizza atualizada com sucesso!`})
+                res.status(200).send(pizzas)
         })
     }
 

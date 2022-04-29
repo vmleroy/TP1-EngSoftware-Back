@@ -10,6 +10,15 @@ class orderController {
     }).populate('user').populate('pizzas').populate('drinks')
   }
 
+  static getOrdersByUserId(req, res) {
+    Order.find({user: req.params.id}, (err, orders) => {
+      if (err)
+        res.status(400).send({message: `${err.message} - falha ao requisitar pedidos.`})
+      else
+        res.status(200).json(orders)
+    }).populate('pizzas').populate('drinks')
+  }
+
   static createOrder(req, res) {
     console.log(req.body)
     const newOrder = new Order(req.body)
@@ -20,7 +29,7 @@ class orderController {
       if (err)
         res.status(400).send({message: `${err.message} - falha ao criar pedido.`})
       else
-        res.status(200).json(order)
+        res.status(200).send(order)
     })
   }
 
@@ -38,25 +47,25 @@ class orderController {
       if (err)
         res.status(400).send({message: `${err.message} - falha ao atualizar pedido.`})
       else
-        res.status(200).json(order)
+      res.status(200).send(order)
     })
   }
 
   static deleteOrder(req, res) {
     Order.findByIdAndRemove(req.params.id, (err, order) => {
       if (err)
-        res.status(400).send({message: `${err.message} - falha ao deletar pedido.`})
+        res.status(400).send({message: `${err.message} - falha ao remover pedido.`})
       else
-        res.status(200).json(order)
+        res.status(200).send({ message: `Pedido removido com sucesso!`})
     })
   }
 
   static deleteAllOrders(req, res) {
     Order.remove({}, (err, order) => {
       if (err)
-        res.status(400).send({message: `${err.message} - falha ao deletar pedidos.`})
+        res.status(400).send({message: `${err.message} - falha ao remover pedidos.`})
       else
-        res.status(200).json(order)
+        res.status(200).send({ message: `Pedidos removidos com sucesso!`})
     })
   }
 }

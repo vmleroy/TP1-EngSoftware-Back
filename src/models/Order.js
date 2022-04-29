@@ -36,8 +36,13 @@ const orderSchema = new mongoose.Schema({
         ref: 'drinks',
         required: true,
     }],
+    promos: [{
+        type: Schema.Types.ObjectId,
+        ref: 'promos',
+        required: true,
+    }]
 
 });
 
-const order = mongoose.model('orders', orderSchema);
-export default order;
+const orders = mongoose.model('orders', orderSchema);
+export default orders;
