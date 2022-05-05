@@ -12,7 +12,7 @@ const promoSchema = new mongoose.Schema({
   }],
   pizzas2flavors: [{
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'pizza2flavors',
+    ref: 'pizza2Flavors',
     required: false,
   }],
   drinks: [{

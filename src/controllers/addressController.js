@@ -10,14 +10,21 @@ class AddressController {
         })
     }
 
-    static createAddress = (req, res) => {
+    static createAddress = async (req, res) => {
             const newAdress = new adress(req.body)
-            newAdress.save((err, adress) => {
-                if (err)
-                    res.status(400).send({message: `${err.message} - falha ao criar endereço.`})
-                else
-                    res.status(200).send(adress)
-            })
+            const addressFind = await adress.find({street: req.body.street, number: req.body.number, district: req.body.district, city: req.body.city})
+
+            if(addressFind.length > 0) {
+                res.status(400).send('addressFind')
+            } else {
+                console.log("Teste: ", addressFind)
+                newAdress.save((err, adress) => {
+                    if (err)
+                        res.status(400).send({message: `${err.message} - falha ao criar endereço.`})
+                    else
+                        res.status(200).send(adress)
+                })
+            }
         }
 
     static getAddressById = (req, res) => {

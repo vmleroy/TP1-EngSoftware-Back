@@ -28,7 +28,7 @@ const orderSchema = new mongoose.Schema({
     }],
     pizza2flavors: [{
         type: Schema.Types.ObjectId,
-        ref: 'pizza2flavors',
+        ref: 'pizza2Flavors',
         required: true,
     }],
     drinks: [{

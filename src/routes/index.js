@@ -4,8 +4,8 @@ import address from "./api/addressRoute.js"
 import user from "./api/userRoute.js"
 import drink from "./api/drinkRoute.js"
 import order from "./api/orderRoute.js"
-import pizza2flavors from "./api/pizza2FlavorsRoute.js"
 import promo from "./api/promoRoute.js"
+import pizza2flavors from "./api/pizza2FlavorsRoute.js"
 
 const routes = (app) => {
     app.route('/').get( (req, res) => {
