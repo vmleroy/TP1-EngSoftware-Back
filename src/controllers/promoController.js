@@ -1,6 +1,6 @@
 import promo from '../models/Promo.js'
 import Pizza from '../models/Pizza.js'
-import Drink from '../models/Pizza.js'
+import Drink from '../models/Drink.js'
 import Pizza2Flavor from '../models/Pizza2Flavors.js'
 
 class PromoController {
@@ -27,7 +27,7 @@ class PromoController {
     }
 
     const newPromo = new promo(req.body)
-    newPromo.price = 0;
+    newPromo.originalPrice = 0;
 
     let pizzasNames = [];
     let pizzas2FlavorsNames = [];
@@ -36,7 +36,8 @@ class PromoController {
     if(req.body.pizzas != null) {
       for(let pizza of req.body.pizzas) {
         const pizzaFind = await Pizza.findById(pizza)
-        newPromo.price += pizzaFind.price
+        console.log(Pizza.findById(pizza))
+        newPromo.originalPrice += pizzaFind.price
         pizzasNames.push(pizzaFind.name)
       }
     }
@@ -44,15 +45,16 @@ class PromoController {
     if(req.body.pizzas2flavors != null) {
       for(let pizza2flavor of req.body.pizzas2flavors) {
         const pizza2flavorFind = await Pizza2Flavor.findById(pizza2flavor)
-        newPromo.price += pizza2flavorFind.price
+        newPromo.originalPrice += pizza2flavorFind.price
         pizzas2FlavorsNames.push(pizza2flavorFind.name)
       }
    }
 
     if(req.body.drinks != null) {
+      console.log(await Drink.find({}))
       for(let drink of req.body.drinks) {
         const drinkFind = await Drink.findById(drink)
-        newPromo.price += drinkFind.price
+        newPromo.originalPrice += drinkFind.price
         drinksNames.push(drinkFind.name)
       }
     }
@@ -62,7 +64,6 @@ class PromoController {
     newPromo.name = newPromo.name.replace(/undefined/g, '')
     newPromo.name = newPromo.name.slice(1, newPromo.name.length - 3)
     
-    newPromo.originalPrice = newPromo.price
     newPromo.promoPrice = (newPromo.originalPrice * (1 - (newPromo.discount/100)))
 
     newPromo.save((err, promo) => {

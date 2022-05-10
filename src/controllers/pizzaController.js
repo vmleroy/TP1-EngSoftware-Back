@@ -22,21 +22,21 @@ class PizzaController {
 
     static createPizza = (req, res) => {
         let pizza = new pizzas(req.body)
-        pizza.save((err) => {
+        pizza.save((err, pizzas) => {
             if (err)
                 res.status(500).send({message: `${err.message} - falha ao cadastrar a pizza.`})
             else   
-                res.status(201).send(pizza.toJSON())
+                res.status(201).send(pizzas.toJSON())
         })
     }
 
     static updatePizza = (req, res) => {
         const id = req.params.id_pizza
-        pizzas.findByIdAndUpdate(id, {$set: req.body}, (err) => {
+        pizzas.findByIdAndUpdate(id, req.body, (err, pizza) => {
             if (err)
                 res.status(500).send({message: `${err.message} - falha ao atualizar a pizza.`})
             else   
-                res.status(200).send(pizzas)
+                res.status(200).send(pizza.toJSON())
         })
     }
 
