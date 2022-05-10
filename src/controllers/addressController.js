@@ -12,10 +12,10 @@ class AddressController {
 
     static createAddress = async (req, res) => {
             const newAdress = new adress(req.body)
-            const addressFind = await adress.find({street: req.body.street, number: req.body.number, district: req.body.district, city: req.body.city})
+            const addressFind = await adress.find({street: req.body.street, number: req.body.number, district: req.body.district, city: req.body.city, complement: req.body.complement})
 
             if(addressFind.length > 0) {
-                res.status(400).send('addressFind')
+                res.status(200).send(addressFind[0]);
             } else {
                 console.log("Teste: ", addressFind)
                 newAdress.save((err, adress) => {

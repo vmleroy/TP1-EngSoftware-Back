@@ -30,7 +30,7 @@ class orderController {
       path: 'drinks',
     }
     })
-}
+  }
 
   static getOrdersByUserId(req, res) {
     Order.find({user: req.params.id}, (err, orders) => {
@@ -38,7 +38,27 @@ class orderController {
         res.status(400).send({message: `${err.message} - falha ao requisitar pedidos.`})
       else
         res.status(200).json(orders)
-    }).populate('pizzas').populate('drinks')
+    }).populate('pizzas')
+      .populate('drinks')
+      .populate('pizza2flavors')
+      .populate({
+      path: 'promos',
+      populate: {
+        path: 'pizzas2flavors',
+      }
+      })
+      .populate({
+      path: 'promos',
+      populate: {
+        path: 'pizzas',
+      }
+      })
+      .populate({
+      path: 'promos',
+      populate: {
+        path: 'drinks',
+      }
+      })
   }
 
   static createOrder(req, res) {
